@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Signin from './Components/Signin';
 import Add from './Components/Add';
 import Home from './Components/Home';
@@ -19,6 +19,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/view/:idx" element={<View/>}/>
       <Route path="/update/:idx" element={<Updated/>}/> 
+      <Route path="/*" element={<Navigate to="/signin"/>}/> 
      </Routes>
 
     </div>
